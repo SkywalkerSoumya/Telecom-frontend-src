@@ -1,0 +1,12 @@
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: rgba(33, 119, 249, 0.952);
+    text-align: center;
+}
+.container{
+    color: black;
+}

@@ -1,0 +1,47 @@
+<div class="container">
+    <h2 class="register-title">WELCOME</h2>
+    <h3 class="register-title">Register Yourself</h3>
+
+    <!-- <form class="register-form" (ngSubmit)="onSubmit()"> -->
+      <form class="register-form" #registerForm = "ngForm">
+        <div class="mb-2">
+          <label for="userName" class="form-label">User Name</label>
+          <input type="text" class="form-control" id="userName" name="userName"
+            [(ngModel)]="customers.userName" placeholder="Enter your name" 
+            pattern="[a-zA-Z]"required>
+        </div>
+  
+        <div class="mb-2">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="userEmail" name="userEmail"
+            [(ngModel)]="customers.userEmail" placeholder="Enter your email address" 
+            pattern="^[a-z0-9._]+@gmail.com$" required>
+        </div>
+  
+        <div class="mb-2">
+          <label for="contact" class="form-label">Phone Number</label>
+          <input type="text" class="form-control" id="contact" name="contactNumber"
+            [(ngModel)]="customers.userNumber" placeholder="Enter your phone number" 
+            pattern="^[7-9]{1}[0-9]{9}$"required>
+        </div>
+  
+        <div class="mb-2">
+          <label for="address" class="form-label">Address</label>
+          <textarea class="form-control" name="address" id="address" rows="3" name="address"
+            [(ngModel)]="customers.userAddress" placeholder="Enter your address"
+            pattern="[a-zA-Z0-9,]" required></textarea>
+        </div>
+  
+        <div class="mb-2">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" name="password"
+            [(ngModel)]="customers.userPassword" placeholder="Enter your password" 
+             required>
+        </div>
+  
+        <div class="text-center">
+          <button class="btn btn--form" type="submit" value="submit" (click)="onSubmit()"
+            [disabled]="registerForm.form.invalid">Submit</button>
+        </div>
+       </form>
+    </div>

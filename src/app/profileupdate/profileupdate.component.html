@@ -1,0 +1,28 @@
+<div class="container">
+    <h3 class="update-profile-title">Update profile</h3>
+
+    <form class="update-profile-form">
+
+        <div class="mb-2">
+          <label for="userName" class="form-label">User Name</label>
+          <input type="text" class="form-control" id="userName" name="userName" [(ngModel)]="customers.userName"
+           placeholder="Enter your name" required>
+        </div>
+  
+        <div class="mb-2">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="userEmail" name="userEmail" [(ngModel)]="customers.userEmail"
+           placeholder="Enter your email address" required>
+        </div>
+  
+        <div class="mb-2">
+          <label for="address" class="form-label">Address</label>
+          <textarea class="form-control" name="address" id="address" rows="3" name="address" [(ngModel)]="customers.userAddress"
+           placeholder="Enter your address" required></textarea>
+        </div>
+  
+        <div class="text-center">
+          <button class="btn btn--form" type="submit" value="submit" (click)="onSubmit()">Submit</button>
+        </div>
+       </form>
+    </div>

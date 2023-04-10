@@ -1,0 +1,39 @@
+
+<h4>Prepaid Plans</h4>
+<div class="overflow-auto">
+<table class = "table table-bordered table-striped ">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Plan Details</th>
+            <th>Validity</th>
+            <th>Cost</th>
+            <th> </th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        <tr *ngFor = "let x of plans" >
+            <td *ngIf="x.planCategory=='prepaid'">
+                <div class="prepaid-plans"> {{x.planName}}</div>
+            </td>
+
+            <td *ngIf="x.planCategory=='prepaid'">
+                <div class="prepaid-plans"> {{x.planDetails}}</div>
+            </td>
+
+            <td *ngIf="x.planCategory=='prepaid'">
+                <div class="prepaid-plans"> {{x.planValidity}}</div>
+            </td>
+
+            <td *ngIf="x.planCategory=='prepaid'">
+                <div class="prepaid-plans"> {{x.planCost}}</div>
+            </td>
+
+            <td *ngIf="x.planCategory=='prepaid'">
+                <button (click)="updatePrepaidRecharge(x.planId,x.planCost)" class="btn btn-success">Recharge</button>
+            </td>
+        </tr> 
+    </tbody>
+</table>
+</div>

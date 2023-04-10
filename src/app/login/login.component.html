@@ -1,0 +1,34 @@
+<div class="container">
+    <h2 class="login-title">Log in</h2>
+
+    <form class="login-form">
+      <div>
+        <label for="name">Mobile Number </label>
+        <input
+          class="form-control"
+          id="name"
+          type="text"
+          placeholder="Mobile Number"
+          name="name"
+          [(ngModel)]="customers.userNumber"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="password">Password </label>
+        <input
+          class="form-control"
+          id="password"
+          type="password"
+          placeholder="password"
+          name="password"
+          [(ngModel)]="customers.userPassword"
+          required
+        />
+      </div>
+
+      <button class="btn btn--form" type="submit" value="Log in"
+        (click)="doLogin(customers)" (click)="goToHome()"> Log in </button>
+    </form>
+  </div>
